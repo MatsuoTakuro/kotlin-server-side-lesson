@@ -1,12 +1,14 @@
-data class User(var name: String)
+data class User(val id: Int, var name: String, var address: String)
 
-fun getUserString(user: User?, newName: String): String? {
-    return user?.run {
-        name = newName
-        toString()
-    }
+fun getUser(id: Int): User {
+    return User(id, "Matsuo", "Fukuoka")
 }
 
-fun createUser(name: String?): User? {
-    return name?.let { User(it) }
+fun updateUser(id: Int, newName: String, newAddress: String) {
+    var name = ""
+    val user = getUser(id).also {
+        it.name = newName
+        it.address = newAddress
+    }
+    println(user)
 }
