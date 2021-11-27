@@ -1,18 +1,22 @@
-open class Animal(val name: String) {
-    fun showName() = println("name is $name")
-    open fun cries() = println("cries")
+sealed class Platform {
+    abstract fun showName()
 }
 
-class Dog(name: String) : Animal(name) {
-    override fun cries() = println("bowwow")
+class AndroidPlatform : Platform() {
+    override fun showName() {
+        println("Android")
+    }
 }
 
+class IosPlatform : Platform() {
+    override fun showName() {
+        println("iOS")
+    }
+}
 
 fun main() {
-    val animal = Animal("cat")
-    animal.showName()
-    animal.cries()
-    val dog = Dog("dog")
-    dog.showName()
-    dog.cries()
+    val android = AndroidPlatform()
+    android.showName()
+    val ios = IosPlatform()
+    ios.showName()
 }
