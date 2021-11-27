@@ -27,3 +27,11 @@ data class User7(val id: Int, var name: String) {
     val isValidName: Boolean
         get() = name != ""
 }
+
+fun printUserInfo(id: Int, name: String = "Default Name") {
+    println("id=$id, name=$name")
+}
+
+data class User8(val id: Int, var name: String = "Default Name") {}
+
+data class User9(val id: Int, var name: String = "Default Name", val age: Int) {}
