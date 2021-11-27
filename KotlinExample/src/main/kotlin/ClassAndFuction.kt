@@ -1,14 +1,8 @@
-data class User(val id: Int, var name: String, var address: String)
-
-fun getUser(id: Int): User {
-    return User(id, "Matsuo", "Fukuoka")
-}
-
-fun updateUser(id: Int, newName: String, newAddress: String) {
-    var name = ""
-    val user = getUser(id).also {
-        it.name = newName
-        it.address = newAddress
+data class Num(val value: Int) {
+    operator fun plus(num: Num): Num {
+        return Num(value + num.value)
     }
-    println(user)
+    operator fun compareTo(num: Num): Int {
+        return value.compareTo(num.value)
+    }
 }
