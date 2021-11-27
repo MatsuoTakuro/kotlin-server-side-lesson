@@ -1,32 +1,22 @@
-
 fun main() {
-    val intList: List<Int> = listOf<Int>(1, 2, 3)
-    println(intList)
-    println(intList[1])
+    val user1 = User1()
+    user1.name = "Matsuo"
+    println(user1.name)
 
-    val stringList: List<String> = listOf<String>("one", "two", "three")
-    println(stringList)
-    println(stringList[1])
+    val user2 = User2(1)
+    println(user2.name)
 
-    val mutableList = mutableListOf(1, 2, 3)
-    mutableList.add(4)
-    println(mutableList)
+    val user3 = User3()
+    user3.name = "Matsuo"
+    println(user3.name)
 
-    val map: Map<Int, String> = mapOf(1 to "one", 2 to "two", 3 to "three")
-    println(map)
-    println(map[2])
-    println(map.containsKey(3))
-    println(map.containsKey(4))
+    val user4 = User4()
+    user4.name = "Matsuo"
+    println(user4.isValidName)
 
-    val mutableMap = mutableMapOf(1 to "one", 2 to "two", 3 to "three")
-    mutableMap[4] = "four"
-    println(mutableMap)
-
-    val set = setOf("one", "two", "three")
-    println(set.contains("three"))
-    println(set.contains("four"))
-
-    val mutableSet = mutableSetOf("one", "two", "three")
-    mutableSet.add("four")
-    println(mutableSet)
+    val user5 = User5()
+    user5.name = ""
+    println(user5.name)
+    user5.name = "Matsuo"
+    println(user5.name)
 }
