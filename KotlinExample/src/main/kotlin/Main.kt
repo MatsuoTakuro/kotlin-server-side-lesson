@@ -1,16 +1,24 @@
 fun main() {
+    var oddNumbers = with(mutableListOf<Int>()) {
+        for (i in 1 .. 10) {
+            if (i % 2 == 1) add(i)
+        }
+        joinToString(separator = " ")
+    }
+    println(oddNumbers)
 
-    println(calc(10, 5))
+    oddNumbers = mutableListOf<Int>().run {
+        for (i in 1 .. 10) {
+            if (i % 2 == 1) add(i)
+        }
+        joinToString(separator = " ")
+    }
+    println(oddNumbers)
 
-    println(squared(2))
+    val user = User("Matsuo")
+    println(getUserString(user, "Kotlin"))
+    println(getUserString(null, "Kotlin"))
 
-    println(squared2(2))
-
-    printCalcResult(10, 20) { num1, num2 -> num1 + num2 }
-    printCalcResult(10, 20) { num1, num2 -> num1 * num2 }
-
-    printAdditionResult(10, 20)
-    printMultiplicationResult(10, 20)
-
-    println(2.square())
+    println(createUser("Java"))
+    println(createUser(null))
 }
