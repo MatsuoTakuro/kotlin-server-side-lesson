@@ -22,3 +22,8 @@ class  User6 {
         return "User6(id=$id, name=$name)"
     }
 }
+
+data class User7(val id: Int, var name: String) {
+    val isValidName: Boolean
+        get() = name != ""
+}

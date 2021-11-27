@@ -1,19 +1,26 @@
 fun main() {
-    val userA = User6()
-    val userB = User6()
+    val user  = User7(1, "Matsuo")
+    val same  = User7(1, "Matsuo")
+    val other = User7(2, "Matsuo")
 
-//    toString
-    println(userA.toString())
-    println(userB.toString())
+    println(user == same)
+    println(user == other)
 
-//    hasCode
-    println(userA.hashCode())
-    println(userB.hashCode())
+    println("user  = ${user.hashCode()}")
+    println("same  = ${same.hashCode()}")
+    println("other = ${other.hashCode()}")
 
-//    equals
-    println(userA == userB)
+    val set = hashSetOf(user)
+    println(set.contains(same))
+    println(set.contains(other))
 
-//    hashCode and equals
-    val set = hashSetOf(userA)
-    println(set.contains(userB))
+    println(user.toString())
+
+    println(user.component1())
+    println(user.component2())
+
+    val updated = user.copy(id = 1, name = "Kotlin")
+    println(updated.toString())
+
+    println(updated.isValidName)
 }
