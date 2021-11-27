@@ -1,9 +1,15 @@
 fun main() {
-    val num = Num(5) + Num(1)
-    println(num)
+    val executor = AddCalculationExecutor(CommonCalculationExecutor())
+    executor.printStartMessage()
+    println(executor.calc(8, 11))
 
-    val compared1 = Num(5) > Num(1)
-    val compared2 = Num(5) < Num(1)
-    println(compared1)
-    println(compared2)
+    val executorDelegate = AddCalculationExecutorDelegate(CommonCalculationExecutor())
+    executorDelegate.printStartMessage()
+    println(executorDelegate.calc(8, 11))
+
+    val delegatePerson = DelegatePerson()
+    delegatePerson.name = "Matsuo"
+    delegatePerson.address = "Fukuoka"
+    println(delegatePerson.name)
+    println(delegatePerson.address)
 }
