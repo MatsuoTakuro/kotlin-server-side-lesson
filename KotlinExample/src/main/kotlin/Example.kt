@@ -1,22 +1,19 @@
 fun main() {
-    val user1 = User1()
-    user1.name = "Matsuo"
-    println(user1.name)
+    val userA = User6()
+    val userB = User6()
 
-    val user2 = User2(1)
-    println(user2.name)
+//    toString
+    println(userA.toString())
+    println(userB.toString())
 
-    val user3 = User3()
-    user3.name = "Matsuo"
-    println(user3.name)
+//    hasCode
+    println(userA.hashCode())
+    println(userB.hashCode())
 
-    val user4 = User4()
-    user4.name = "Matsuo"
-    println(user4.isValidName)
+//    equals
+    println(userA == userB)
 
-    val user5 = User5()
-    user5.name = ""
-    println(user5.name)
-    user5.name = "Matsuo"
-    println(user5.name)
+//    hashCode and equals
+    val set = hashSetOf(userA)
+    println(set.contains(userB))
 }

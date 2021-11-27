@@ -1,29 +1,24 @@
-class User1 {
-    var name: String = ""
-}
+class  User6 {
+    val id: Int = 1
+    val name = "Kotlin"
 
-class User2(id: Int) {
-    val id: Int = id
-    val name: String = ""
-}
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
 
-class User3 {
-    lateinit var name: String
-}
+        other as User6
 
-class User4 {
-    lateinit var name: String
-    val isValidName: Boolean
-        get() = name != ""
-}
+        if (id != other.id) return false
+        if (name != other.name) return false
 
-class User5 {
-    var name: String = ""
-        set(value) {
-            field = if (value == "") {
-                "Kotlin"
-            } else {
-                value
-            }
-        }
+        return true
+    }
+
+    override fun hashCode(): Int {
+        return 31 * name.hashCode() + id
+    }
+
+    override fun toString(): String {
+        return "User6(id=$id, name=$name)"
+    }
 }
