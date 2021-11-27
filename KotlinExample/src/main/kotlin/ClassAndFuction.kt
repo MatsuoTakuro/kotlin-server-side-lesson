@@ -1,2 +1,6 @@
-data class User(val id: Int,  val teamId: Int, val name: String)
+import kotlinx.coroutines.delay
 
+suspend fun printName() {
+    delay(1000L)
+    println("Matsuo3.")
+}
