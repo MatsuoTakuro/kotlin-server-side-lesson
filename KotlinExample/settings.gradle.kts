@@ -1,3 +1,3 @@
 
-rootProject.name = "KotlinExample"
+rootProject.name = "untitled"
 
