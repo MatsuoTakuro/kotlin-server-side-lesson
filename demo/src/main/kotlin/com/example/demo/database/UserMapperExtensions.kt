@@ -8,7 +8,7 @@ import com.example.demo.database.UserDynamicSqlSupport.User.age
 import com.example.demo.database.UserDynamicSqlSupport.User.id
 import com.example.demo.database.UserDynamicSqlSupport.User.name
 import com.example.demo.database.UserDynamicSqlSupport.User.profile
-import database.UserRecord
+import com.example.demo.database.UserRecord
 import org.mybatis.dynamic.sql.SqlBuilder.isEqualTo
 import org.mybatis.dynamic.sql.util.kotlin.*
 import org.mybatis.dynamic.sql.util.kotlin.mybatis3.*

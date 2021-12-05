@@ -19,7 +19,7 @@
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
         <javaModelGenerator
-                targetPackage="database"
+                targetPackage="com.example.demo.database"
                 targetProject="src/main/kotlin">
         </javaModelGenerator>
         <javaClientGenerator
