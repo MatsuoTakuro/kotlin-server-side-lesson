@@ -3,7 +3,7 @@
  */
 package com.example.demo.database
 
-import database.UserRecord
+import com.example.demo.database.UserRecord
 import org.apache.ibatis.annotations.DeleteProvider
 import org.apache.ibatis.annotations.InsertProvider
 import org.apache.ibatis.annotations.Mapper
