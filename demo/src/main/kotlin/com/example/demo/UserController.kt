@@ -16,7 +16,7 @@ class UserController(
     val userMapper: UserMapper
 ) {
     @GetMapping("/select/{id}")
-    fun select(@PathVariable("id") id: Int): com.example.demo.database.UserRecord? {
+    fun select(@PathVariable("id") id: Int): UserRecord? {
         return userMapper.selectByPrimaryKey(id)
     }
 
