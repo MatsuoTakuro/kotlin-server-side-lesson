@@ -9,10 +9,10 @@ data class HelloResponse(val message: String)
 
 @RestController
 @RequestMapping("greeter")
-class GreeterController(
-    @Qualifier("EnglishMessageService")
-    private val messageService: MessageService
-) {
+class GreeterController {
+    @Autowired
+    private lateinit var greeter: Greeter
+
     @GetMapping("/hello")
     fun hello(@RequestParam("name") name: String): HelloResponse {
         return HelloResponse("Hello $name")
@@ -29,6 +29,6 @@ class GreeterController(
     }
     @GetMapping("/hello/service")
     fun helloMessageService(): HelloResponse {
-        return HelloResponse(messageService.displayLang())
+        return HelloResponse(greeter.sayHello("test"))
     }
 }
